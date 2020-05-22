@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "newest-list":"../../components/newest-list/newest-list"
+  },
+  "navigationBarTitleText": "零食商城"
+}

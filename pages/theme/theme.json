@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "newest-list":"../../components/newest-list/newest-list"
+  }
+}

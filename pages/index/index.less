@@ -1,0 +1,72 @@
+.snackShop-index {
+    /*轮播图开始*/
+    .smack-index-swiper {
+        swiper {
+        swiper-item {
+            image {
+
+            }
+        }
+        }
+    }
+    /*轮播图结束*/
+    /*精选主题开始*/
+    .snackShop-index-theme {
+        .snackShop-index-theme-title {
+            color:var(--themeColor);
+            height: 80rpx;
+            line-height: 80rpx;
+            text-align: center;
+        }
+        .snackShop-index-theme-imglist {
+            display: flex;
+            flex-wrap: wrap;
+            .snackShop-index-theme-imglist-item {
+                width: 50%;
+                &:nth-of-type(3) {
+                    width: 100%;
+                }
+                image {
+
+                }
+            }
+        }
+    }
+    /*精选主题结束*/
+    /*最新新品开始*/
+    .snackShop-index-newest {
+        .newest-title {
+            height: 80rpx;
+            line-height: 80rpx;
+            text-align: center;
+            color: var(--themeColor);
+        }
+        .newest-list {
+            display: flex;
+            flex-wrap: wrap;
+            .newest-list-item {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .newest-list-item-img {
+                    height: 180rpx;
+                    width: 180rpx;
+                    image {
+            
+                    }
+                }
+                .newest-list-item-text {
+                    text-align: center;
+                    .name {
+            
+                    }
+                    .price {
+                    }
+                }
+            }
+        }
+    }
+    /*最新新品结束*/
+}

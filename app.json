@@ -1,0 +1,43 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/classify/classify",
+    "pages/shopcar/shopcar",
+    "pages/user/user",
+    "pages/theme/theme",
+    "pages/goods/goods",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ab946d",
+    "navigationBarTitleText": "零食商城",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "selectedColor": "#ab946d",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "主页",
+      "iconPath": "./image/home.png",
+      "selectedIconPath": "./image/home-o.png"
+    },{
+      "pagePath": "pages/classify/classify",
+      "text": "分类",
+      "iconPath": "./image/category.png",
+      "selectedIconPath": "./image/category-o.png"
+    },{
+      "pagePath": "pages/shopcar/shopcar",
+      "text": "购物车",
+      "iconPath": "./image/navigator.png",
+      "selectedIconPath": "./image/navigator-o.png"
+    },{
+      "pagePath": "pages/user/user",
+      "text": "我的",
+      "iconPath": "./image/my.png",
+      "selectedIconPath": "./image/my-o.png"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

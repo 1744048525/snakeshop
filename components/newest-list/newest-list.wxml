@@ -1,0 +1,20 @@
+ <view class="newest-list">
+        <!-- 每一项 -->
+        <!-- 根据url上传输的不同的id值渲染不同的页面 -->
+        <navigator
+        url="../goods/goods?id={{item.id}}"
+          open-type="navigate"
+         class="newest-list-item" wx:for="{{newest}}" wx:key="index">
+          <!-- 图片 -->
+          <view class="newest-list-item-img">
+            <image src="{{item.imageUrl}}"></image>
+          </view>
+          <!-- 文字说明 -->
+          <view class="newest-list-item-text">
+            <!-- 商品名字以及数量 -->
+            <view class="name">{{item.title + " "}}{{item.count}}</view>
+            <!-- 商品价格 -->
+            <view class="price">￥{{" " + item.price}}</view>
+          </view>
+        </navigator>
+      </view>

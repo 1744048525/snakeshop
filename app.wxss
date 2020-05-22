@@ -1,0 +1,25 @@
+/* 样式初始化 */
+view,
+text,
+navigator,
+swiper,
+swiper-item,
+button,
+checkbox,
+checkbox-group,
+radio,
+radio-group {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+page {
+  /* 相当于定义了一个全局变量,用于存储一个颜色值,其他地方如果需要使用到该颜色值,只需要调用该变量就好了，如果网页中大量位置使用了这个颜色值,当需要批量改变颜色,也只需要改变这个变量的颜色值即可,相当于为网页进行换肤操作 */
+  --themeColor:#ab946d;
+}
+/* 让图片默认占满整个容器的宽度 */
+image {
+  width: 100%;
+  height: 100%;
+}
+

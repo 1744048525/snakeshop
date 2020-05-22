@@ -1,0 +1,31 @@
+.snackShop-index {
+  /*轮播图开始*/
+  /*轮播图结束*/
+  /*精选主题开始*/
+  /*精选主题结束*/
+  /*最新新品开始*/
+  /*最新新品结束*/
+}
+.snackShop-index .snackShop-index-theme .snackShop-index-theme-title {
+  color: var(--themeColor);
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+.snackShop-index .snackShop-index-theme .snackShop-index-theme-imglist {
+  display: flex;
+  flex-wrap: wrap;
+}
+.snackShop-index .snackShop-index-theme .snackShop-index-theme-imglist .snackShop-index-theme-imglist-item {
+  width: 50%;
+}
+.snackShop-index .snackShop-index-theme .snackShop-index-theme-imglist .snackShop-index-theme-imglist-item:nth-of-type(3) {
+  width: 100%;
+}
+.snackShop-index .snackShop-index-newest .newest-title {
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: var(--themeColor);
+}
+

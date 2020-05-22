@@ -1,0 +1,53 @@
+<view class="snackShop-index">
+  <!-- 轮播图开始 -->
+  <view class="smack-index-swiper">
+    <swiper
+      indicator-active-color="white"
+      indicator-color="black"
+      indicator-dots="{{true}}"
+      interval="{{2000}}"
+      autoplay="{{true}}"
+      circular="true"
+    >
+      <swiper-item wx:for="{{swiper_list}}" wx:key="index">
+        <image src="{{item}}"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 轮播图结束 -->
+  <!-- 精选主题开始 -->
+    <view class="snackShop-index-theme">
+      <!-- 标题 -->
+      <view class="snackShop-index-theme-title">精选主题</view>
+      <!-- 图片列表 -->
+      <view class="snackShop-index-theme-imglist">
+      <!-- 由于每一个item都对应跳转到一个页面，所以这里我们需要来修改他的标签为navgatior -->
+      <!-- 由于点击不同的item所跳转的页面不同,因此为了区分是跳转不同的页面,我们可以在url上做点动作,传输一个id属性,通过id属性的值来判断应该此时跳转到的页面是哪一个页面,不同的页面执行不同的渲染方案,因此我们还需要在页面的js文件的data中对相应属性的每一项增加一个id值,然后在通过插值法将对应的id值插入到url中 -->
+        <navigator 
+        url="../theme/theme?id={{item.id}}"
+        open-type="navigate"
+        class="snackShop-index-theme-imglist-item" 
+        wx:for="{{theme}}" 
+        wx:key="id">
+        <!-- mode="widthFix"缩放模式，宽度不变，高度自动变化，保持原图宽高比不变 -->
+        <!-- mode="heightFix"缩放模式，高度不变，宽度自动变化，保持原图宽高比不变 -->
+          <image src="{{item.url}}"
+          mode="widthFix"
+          ></image>
+        </navigator>
+      </view>
+    </view>
+  <!-- 精选主题结束 -->
+  <!-- 最新新品开始 -->
+    <view class="snackShop-index-newest">
+      <!-- 标题 -->
+      <view class="newest-title">
+        最近新品
+      </view>
+      <!-- 新品列表 -->
+      <!-- 将当前页面js文件里data对象内的名叫newest的属性赋值给组件页面js文件里properties对象内名叫newest的属性 -->
+      <!-- 这样组件就可以获取到相应的数据，然后渲染出来 -->
+        <newest-list newest="{{newest}}"/>
+    </view>
+  <!-- 最新新品结束 -->
+</view>
