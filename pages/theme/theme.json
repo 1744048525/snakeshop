@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "newest-list":"../../components/newest-list/newest-list"
+    "newest-list":"../../components/newest-list/newest-list",
+    "swiper-list":"../../components/swiper-list/swiper-list"
   }
 }

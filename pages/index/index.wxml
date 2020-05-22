@@ -1,19 +1,6 @@
 <view class="snackShop-index">
   <!-- 轮播图开始 -->
-  <view class="smack-index-swiper">
-    <swiper
-      indicator-active-color="white"
-      indicator-color="black"
-      indicator-dots="{{true}}"
-      interval="{{2000}}"
-      autoplay="{{true}}"
-      circular="true"
-    >
-      <swiper-item wx:for="{{swiper_list}}" wx:key="index">
-        <image src="{{item}}"></image>
-      </swiper-item>
-    </swiper>
-  </view>
+  <swiper-list swiper_list="{{swiper_list}}"/>
   <!-- 轮播图结束 -->
   <!-- 精选主题开始 -->
     <view class="snackShop-index-theme">
