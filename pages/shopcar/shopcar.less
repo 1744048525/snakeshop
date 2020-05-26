@@ -1,0 +1,103 @@
+.snackShop-shopcar {
+    .list {
+        .list-item {
+            height: 200rpx;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            .left {
+            }
+            .middle {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                .middle-top {
+                    height: 100rpx;
+                    width: 100%;
+                    line-height: 100rpx;
+                    .nameAndCount {
+
+                    }
+                }
+                .middle-bottom{
+                    height: 100rpx;
+                    width: 100%;
+                    line-height: 100rpx;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    .minus {
+
+                    }
+                    .num {
+
+                    }
+                    .add {
+
+                    }
+                } 
+            }
+            .right {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                .price {
+                    height: 100rpx;
+                    width: 100%;
+                    line-height: 100rpx;
+                }
+                .delete {
+                    height: 100rpx;
+                    width: 100%;
+                    text-align: center;
+                    line-height: 100rpx;
+                }
+            }
+        }
+    }
+    .shopcar-bottom {
+        height: 100rpx;
+        background-color: var(--themeColor);
+        position: fixed;
+        width: 100vw;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10rpx;
+        .left {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 10rpx;
+            icon {
+                margin-right: 10rpx;
+            }
+            .text {
+                color: white;
+            }
+        }
+        .right {
+            height: 100rpx;
+            padding: 10rpx;
+            display: flex;
+            align-items: center;
+
+            .totalPrice {
+                height: 100rpx;
+                font-size: 50rpx;
+                color: white;
+                line-height: 100rpx;
+            }
+            .arrow {
+                height: 50rpx;
+                image {
+                    width: 50rpx;
+                }
+            }
+        }
+    }
+}

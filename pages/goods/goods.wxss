@@ -1,1 +1,106 @@
-/* pages/goods/goods.wxss */
+.snackShop-goods .shopCarIcon {
+  position: relative;
+}
+.snackShop-goods .shopCarIcon::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.snackShop-goods .shopCarIcon .icon {
+  width: 80rpx;
+  float: right;
+  margin: 10rpx;
+}
+.snackShop-goods .shopCarIcon .hide {
+  display: none;
+}
+.snackShop-goods .shopCarIcon .shopNum {
+  height: 50rpx;
+  width: 50rpx;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  text-align: center;
+  position: absolute;
+  top: 5rpx;
+  right: 60rpx;
+  color: white;
+  border-radius: 50%;
+  background-color: var(--themeColor);
+}
+.snackShop-goods .detail .goodsImage {
+  width: 50vw;
+  margin: 0 auto;
+}
+.snackShop-goods .detail .function {
+  width: 90%;
+  height: 120rpx;
+  display: flex;
+  margin: 0 auto;
+  border-radius: 50rpx;
+  background-color: var(--themeColor);
+  color: white;
+  justify-content: space-around;
+  align-items: center;
+}
+.snackShop-goods .detail .function .goodsnum {
+  flex: 4;
+  text-align: center;
+}
+.snackShop-goods .detail .function .add {
+  flex: 1;
+  text-align: center;
+}
+.snackShop-goods .detail .function .addCartText {
+  flex: 4;
+  text-align: center;
+}
+.snackShop-goods .detail .function .fun-icon {
+  flex: 2;
+  text-align: center;
+}
+.snackShop-goods .detail .function .fun-icon image {
+  width: 50rpx;
+}
+.snackShop-goods .detail .stock {
+  text-align: center;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.snackShop-goods .detail .title {
+  text-align: center;
+  height: 100rpx;
+  font-size: 50rpx;
+  line-height: 100rpx;
+}
+.snackShop-goods .detail .price {
+  text-align: center;
+  height: 100rpx;
+  font-size: 50rpx;
+  line-height: 100rpx;
+}
+.snackShop-goods .content .top {
+  height: 100rpx;
+  display: flex;
+  border-bottom: 1rpx solid gray;
+  border-top: 20rpx solid rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.6);
+}
+.snackShop-goods .content .top .active {
+  color: var(--themeColor);
+  border-bottom: 2rpx solid var(--themeColor);
+}
+.snackShop-goods .content .top .top-detail {
+  flex: 1;
+  text-align: center;
+  line-height: 80rpx;
+}
+.snackShop-goods .content .top .top-parameter {
+  flex: 1;
+  text-align: center;
+  line-height: 80rpx;
+}
+.snackShop-goods .content .top .top-service {
+  flex: 1;
+  text-align: center;
+  line-height: 80rpx;
+}

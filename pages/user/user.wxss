@@ -1,1 +1,133 @@
-/* pages/user/user.wxss */
+.snackShop-user .login {
+  height: 100rpx;
+  width: 100vw;
+  background-color: var(--themeColor);
+}
+.snackShop-user .login .userMessage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.snackShop-user .login .userMessage .left {
+  display: flex;
+  align-items: center;
+  margin-left: 20rpx;
+}
+.snackShop-user .login .userMessage .left .userImg {
+  width: 100rpx;
+  margin-right: 20rpx;
+}
+.snackShop-user .login .userMessage .left .userImg image {
+  border-radius: 50%;
+}
+.snackShop-user .login .userMessage .left .nickName {
+  color: white;
+  font-style: italic;
+}
+.snackShop-user .login .userMessage .right {
+  padding: 20rpx;
+}
+.snackShop-user .login .userMessage .right .guanyu {
+  color: white;
+}
+.snackShop-user .toAddress {
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  color: gray;
+  position: relative;
+  border-bottom: 1px solid #ddd;
+}
+.snackShop-user .toAddress::after {
+  content: '';
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  right: 20rpx;
+  top: 35rpx;
+  transform: rotate(45deg);
+  border-top: 5rpx solid #a3a2a2;
+  border-right: 5rpx solid #a3a2a2;
+}
+.snackShop-user .address-userName {
+  width: 100vw;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  color: gray;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+.snackShop-user .address-telNumber {
+  width: 100vw;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  color: gray;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+.snackShop-user .address-detail {
+  width: 100vw;
+  height: 105rpx;
+  line-height: 105rpx;
+  font-size: 30rpx;
+  color: gray;
+  text-align: center;
+  border-bottom: 5px solid #ddd;
+}
+.snackShop-user .myOrder .order-title {
+  width: 100vw;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  color: gray;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+.snackShop-user .myOrder .cartsList {
+  width: 150vw;
+  height: 150rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+.snackShop-user .myOrder .cartsList .left {
+  margin-right: 20rpx;
+}
+.snackShop-user .myOrder .cartsList .left image {
+  width: 120rpx;
+}
+.snackShop-user .myOrder .cartsList .right {
+  font-size: 35rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.snackShop-user .myOrder .order-id {
+  width: 100vw;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  color: gray;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+.snackShop-user .myOrder .order-pay {
+  width: 100vw;
+  height: 100rpx;
+  padding: 10rpx;
+  line-height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.snackShop-user .myOrder .order-pay .pay {
+  width: 200rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  border-radius: 5rpx;
+  color: white;
+  background-color: #a51414;
+}

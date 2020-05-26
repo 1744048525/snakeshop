@@ -1,2 +1,82 @@
-<!--pages/shopcar/shopcar.wxml-->
-<text>pages/shopcar/shopcar.wxml</text>
+<view class="snackShop-shopcar">
+  <!-- 如果购物车为空显示空购物车图片 -->
+  <block class="emptyImg" wx:if="{{carts.length === 0}}"><image src="/image/emptyCarts.gif" mode="widthFix"></image></block>
+  <!-- 购物车列表开始 -->
+  <view class="list">
+    <!-- 购物车每一项开始 -->
+    <view class="list-item" wx:for="{{carts}}" wx:key="index">
+      <!-- 左边部分开始 -->
+        <!-- 为按钮绑定点击事件,同时将其下标传入到回调中 -->
+        <view class="left" bindtap="changeChecked" data-index="{{index}}">
+        <!-- 使用block标签分别设置一个选中按钮和未选中按钮,然后通过wx:if来判断data中当前项的checked属性是否weitrue,为true表示被选中,则被选中按钮的wx:if的值为true,渲染被选中按钮,否则渲染未被选中按钮 -->
+          <!-- 选中按钮 -->
+          <block class="checked"  wx:if="{{item.checked === true}}">
+            <icon type="success" color="red" size="30"></icon>
+          </block>
+          <!-- 未选中按钮 -->
+          <block wx:else class="no-checked">
+            <icon type="circle" size="30"></icon>
+          </block>
+        </view>
+      <!-- 左边部分结束 -->
+      <!-- 中间部分开始 -->
+        <view class="middle">
+          <!-- 上边部分开始 -->
+          <view class="middle-top">
+            <!-- 商品名字及数量 -->
+            <view class="nameAndCount">{{item.data.title + " "}}{{item.data.count * item.num}}{{item.data.unit}}</view>
+          </view>
+          <!-- 上边部分结束 -->
+          <!-- 下边部分开始 -->
+          <view class="middle-bottom">
+            <!-- 加号 -->
+            <view class="minus" bindtap="minusCarts" data-index="{{index}}">-</view>
+            <!-- 商品数量 -->
+            <view class="num">{{item.num}}</view>
+            <!-- 减号 -->
+            <view class="add" bindtap="addCarts" data-index="{{index}}">+</view>
+          </view>
+          <!-- 下边部分结束 -->
+        </view>
+      <!-- 中间部分结束 -->
+      <!-- 右边部分开始 -->
+        <view class="right">
+          <!-- 商品单价 -->
+          <view class="price">￥{{item.data.price}}</view>
+          <!-- 删除号 -->
+          <view class="delete" bindtap="delCarts" data-index="{{index}}">×</view>
+        </view>
+      <!-- 右边部分结束 -->
+    <!-- 购物车每一项结束 -->
+    </view>
+  </view>
+  <!-- 购物车列表结束 -->
+  <!-- 底部栏开始 -->
+    <view class="shopcar-bottom">
+      <!-- 左边部分开始 -->
+      <view class="left"  bindtap="allChecked">
+        <!-- 全选按钮 -->
+        <!-- 如果按钮全选中,则显示下面的icon -->
+        <icon type="success" color="white" size="22" wx:if="{{allChecked}}"></icon>
+        <!-- 否则显示下面的icon -->
+        <icon type="circle" color="white" size="22" wx:else></icon>
+        <view class="text">全选</view>
+      </view>
+      <!-- 左边部分结束 -->
+      <!-- 右边部分开始 -->
+      <view class="right">
+        <!-- 商品总价 -->
+        <view class="totalPrice">￥{{totalPrice}}</view>
+        <!-- 箭头 -->
+        <!-- 点击箭头跳转到支付页面 -->
+        <navigator
+          url="/pages/pay/pay"
+          open-type="navigate"
+         class="arrow">
+          <image src="/image/icon3.png" mode="widthFix"></image>
+        </navigator>
+      </view>
+      <!-- 右边部分结束 -->
+    </view>
+  <!-- 底部栏结束 -->
+</view>

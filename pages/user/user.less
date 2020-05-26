@@ -1,0 +1,157 @@
+.snackShop-user {
+    .login {
+        height: 100rpx;
+        width: 100vw;
+        background-color: var(--themeColor);
+        .userMessage {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .left{
+                display: flex;
+                align-items: center;
+                margin-left: 20rpx;
+                .userImg {
+                    width: 100rpx;
+                    margin-right: 20rpx;
+                    image {
+                        border-radius: 50%;
+                    }
+                }
+                .nickName {
+                    color: white;
+                    font-style: italic;
+                }
+            }
+            .right{
+                padding: 20rpx;
+                .guanyu{
+                    color: white;
+                }
+            }
+        }
+    }
+    .toAddress {
+        height: 100rpx;
+        text-align: center;
+        line-height: 100rpx;
+        color: gray;
+        position: relative;
+        border-bottom: 1px solid #ddd;
+        &::after {
+            content: '';
+            width: 30rpx;
+            height: 30rpx;
+            position: absolute;
+            right: 20rpx;
+            top: 35rpx;
+            transform: rotate(45deg);
+            border-top: 5rpx solid rgb(163, 162, 162);
+            border-right: 5rpx solid rgb(163, 162, 162);
+        }
+        .addressManager {
+        
+        }
+    }
+        .address-userName {
+            width: 100vw;
+            height: 100rpx;
+            line-height: 100rpx;
+            font-size: 30rpx;
+            color: gray;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        .address-telNumber {
+            width: 100vw;
+            height: 100rpx;
+            line-height: 100rpx;
+            font-size: 30rpx;
+            color: gray;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        .address-detail {
+            width: 100vw;
+            height: 105rpx;
+            line-height: 105rpx;
+            font-size: 30rpx;
+            color: gray;
+            text-align: center;
+            border-bottom: 5px solid #ddd;
+        }
+        .myOrder {
+            .order-title {
+                width: 100vw;
+                height: 100rpx;
+                line-height: 100rpx;
+                font-size: 30rpx;
+                color: gray;
+                text-align: center;
+                border-bottom: 1px solid #ddd;
+            }
+                .cartsList {
+                    width: 150vw;
+                    height: 150rpx;
+                    display: flex;
+                    align-items: center;
+                    border-bottom: 1px solid #ddd;
+                .left {
+                    margin-right: 20rpx;
+                    image {
+                        width: 120rpx;
+                    }
+                }
+            
+                .right {
+                    font-size: 35rpx;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    .goods-title {
+                        
+                    }
+            
+                    .goods-price {
+            
+                    }
+            
+                    .goods-num {
+            
+                    }
+                }
+                }
+            .order-id {
+                width: 100vw;
+                height: 100rpx;
+                line-height: 100rpx;
+                font-size: 30rpx;
+                color: gray;
+                text-align: center;
+                border-bottom: 1px solid #ddd;
+            }
+            
+            .order-pay {
+                width: 100vw;
+                height: 100rpx;
+                padding: 10rpx;
+                line-height: 100rpx;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .price {
+            
+                }
+            
+                .pay {
+                    width: 200rpx;
+                    height: 90rpx;
+                    line-height: 90rpx;
+                    text-align: center;
+                    border-radius: 5rpx;
+                    color: white;
+                    background-color: rgb(165, 20, 20);
+                }
+            }
+        }
+}

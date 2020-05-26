@@ -1,11 +1,13 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/classify/classify",
     "pages/shopcar/shopcar",
     "pages/user/user",
     "pages/theme/theme",
     "pages/goods/goods",
+    "pages/category/category",
+    "pages/address/address",
+    "pages/pay/pay",
     "pages/logs/logs"
   ],
   "window":{
@@ -16,13 +18,14 @@
   },
   "tabBar": {
     "selectedColor": "#ab946d",
+    "color":"#ddd",
     "list": [{
       "pagePath": "pages/index/index",
       "text": "主页",
       "iconPath": "./image/home.png",
       "selectedIconPath": "./image/home-o.png"
     },{
-      "pagePath": "pages/classify/classify",
+      "pagePath": "pages/category/category",
       "text": "分类",
       "iconPath": "./image/category.png",
       "selectedIconPath": "./image/category-o.png"

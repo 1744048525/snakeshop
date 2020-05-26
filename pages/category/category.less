@@ -1,0 +1,70 @@
+.snackShop-category {
+    display: flex;
+    .left {
+        width: 20%;
+        background-color: #fff;
+        height: 100vh;//默认视口的100%高度
+        border-right: 1px solid gray;
+        .active {
+            border-left: 4px solid var(--themeColor);
+            color: var(--themeColor);
+        }
+        .catagorylist {
+            height: 80rpx;
+            line-height: 80rpx;
+            text-align: center;
+        }
+    }
+    .right {
+        width: 80%;
+        height: 100vh;//视口的100%高度
+        .headerImg {
+            width: 100%;
+            image {
+            }
+        }
+        .title {
+            height: 80rpx;
+            line-height: 80rpx;
+            text-align: center;
+            color: var(--themeColor);
+            position: relative;
+            &::before{
+                content: ' ';
+                position: absolute;
+                width: 100rpx;
+                height: 5rpx;
+                top: 40rpx;
+                left: 135rpx;
+                background-color: var(--themeColor);
+            }
+            &::after{
+                content: ' ';
+                position: absolute;
+                width: 100rpx;
+                height: 5rpx;
+                top: 40rpx;
+                right: 135rpx;
+                background-color: var(--themeColor);
+            }
+        }
+        .list {
+            display: flex;
+            flex-wrap: wrap;
+            .item {
+                width: 33.333%;
+                padding: 20rpx;
+                .item-img {
+                    padding: 30rpx;
+                    image {
+
+                    }
+                }
+                .item-name {
+                    text-align: center;
+                    font-size: 28rpx;
+                }
+            }
+        }
+    }
+}

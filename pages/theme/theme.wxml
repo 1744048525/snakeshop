@@ -1,4 +1,4 @@
-<view class="snake-theme">
+<view class="snakeShop-theme">
   <!-- 轮播图开始 -->
   <swiper-list swiper_list="{{pageData.bannerList}}"/>
   <!-- 轮播图结束 -->

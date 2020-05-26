@@ -1,1 +1,84 @@
-/* pages/shopcar/shopcar.wxss */
+.snackShop-shopcar .list .list-item {
+  height: 200rpx;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.snackShop-shopcar .list .list-item .middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.snackShop-shopcar .list .list-item .middle .middle-top {
+  height: 100rpx;
+  width: 100%;
+  line-height: 100rpx;
+}
+.snackShop-shopcar .list .list-item .middle .middle-bottom {
+  height: 100rpx;
+  width: 100%;
+  line-height: 100rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.snackShop-shopcar .list .list-item .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.snackShop-shopcar .list .list-item .right .price {
+  height: 100rpx;
+  width: 100%;
+  line-height: 100rpx;
+}
+.snackShop-shopcar .list .list-item .right .delete {
+  height: 100rpx;
+  width: 100%;
+  text-align: center;
+  line-height: 100rpx;
+}
+.snackShop-shopcar .shopcar-bottom {
+  height: 100rpx;
+  background-color: var(--themeColor);
+  position: fixed;
+  width: 100vw;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rpx;
+}
+.snackShop-shopcar .shopcar-bottom .left {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10rpx;
+}
+.snackShop-shopcar .shopcar-bottom .left icon {
+  margin-right: 10rpx;
+}
+.snackShop-shopcar .shopcar-bottom .left .text {
+  color: white;
+}
+.snackShop-shopcar .shopcar-bottom .right {
+  height: 100rpx;
+  padding: 10rpx;
+  display: flex;
+  align-items: center;
+}
+.snackShop-shopcar .shopcar-bottom .right .totalPrice {
+  height: 100rpx;
+  font-size: 50rpx;
+  color: white;
+  line-height: 100rpx;
+}
+.snackShop-shopcar .shopcar-bottom .right .arrow {
+  height: 50rpx;
+}
+.snackShop-shopcar .shopcar-bottom .right .arrow image {
+  width: 50rpx;
+}

@@ -1,0 +1,66 @@
+<view class="snackShop-pay">
+  <!-- 收货地址开始 -->
+  <!-- 点击跳转到获取地址页面 -->
+    <navigator
+      open-type="navigate"
+      url="/pages/address/address"
+     class="address-content">
+      <!-- 如果存在用户地址信息,则渲染下面内容 -->
+      <block wx:if="{{address.userName}}">
+        <!-- 第一行内容开始 -->
+        <view class="address-top">
+          <!-- 收货人姓名 -->
+          <view class="username">
+            收货人:{{address.userName}}
+          </view>
+          <!-- 收货人电话 -->
+          <view class="telNumber">
+            电话:{{address.telNumber}}
+          </view>
+        </view>
+        <!-- 第一行内容结束 -->
+        <!-- 第二行内容开始 -->
+        <view class="address-bottom">
+          <!-- 收货人详细住址以及邮编 -->
+          <view class="addressDetail">
+            {{address.provinceName + address.cityName + address.countyName + address.detailInfo}},邮编:{{address.nationalCode}}
+          </view>
+        </view>
+        <!-- 第二行内容结束 -->
+      </block>
+      <!-- 否则渲染下面内容 -->
+      <block wx:else>
+        添加收货地址
+      </block>
+    </navigator>
+  <!-- 收货地址结束 -->
+  <!-- 购物车列表开始 -->
+    <view class="carts-list" wx:for="{{carts}}" wx:key="index">
+      <!-- 每一项开始 -->
+      <view class="carts-item">
+        <!-- 商品图片 -->
+        <view class="item-img">
+          <image src="{{item.data.imageUrl}}" mode="widthFix"></image>
+        </view>
+        <!-- 商品详情 -->
+        <view class="item-detail">
+          <!-- 商品名称 -->
+          <view class="title">{{item.data.title}}</view>
+          <!-- 商品单价 -->
+          <view class="price">￥{{item.data.price}}</view>
+          <!-- 商品数量 -->
+          <view class="num">×{{item.num}}</view>
+        </view>
+      </view>
+      <!-- 每一项结束 -->
+    </view>
+  <!-- 购物车列表结束 -->
+  <!-- 底部栏支付栏开始 -->
+    <view class="bottom">
+      <!-- 付款合计 -->
+      <view class="totalPrice">付款合计: ￥{{totalPrice}}</view>
+      <!-- 去付款按钮 -->
+      <view class="toPay" bindtap="pay">去付款</view>
+    </view> 
+  <!-- 底部栏支付栏结束 -->
+</view>

@@ -1,0 +1,96 @@
+.snackShop-pay {
+    .address-content {
+        height: 150rpx;
+        text-align: center;
+        position: relative;
+        line-height: 150rpx;
+        color: #ddd;
+        border-bottom: 5rpx solid #ddd;
+        &::after {
+            content: '';
+            width: 20rpx;
+            height: 20rpx;
+            position: absolute;
+            border-top: 3rpx solid gray;
+            border-right: 3rpx solid gray;
+            right: 50rpx;
+            top: 62rpx;
+            transform: rotate(45deg);
+        }
+        .address-top {
+            width: 100vw;
+            height: 60rpx;
+            padding: 10rpx;
+            line-height: 60rpx;
+            font-size: 30rpx;
+            display: flex;
+            .username {
+                margin-right: 150rpx;
+            }
+            .telNumber {
+            
+            }
+        }
+        .address-bottom {
+            width: 100vw;
+            height: 60rpx;
+            padding: 10rpx;
+            text-align: left;
+            line-height: 60rpx;
+            font-size: 30rpx;
+            .addressDetail {
+            
+            }
+        }                 
+    }
+    .carts-list {
+        height: 180rpx;
+        padding: 10rpx;
+        border-bottom: 1rpx solid #ddd;
+        .carts-item {
+            display: flex;
+            font-size: 35rpx;
+            .item-img {
+                margin-right: 20rpx;
+                width: 150rpx;
+                image {
+            
+                }
+            }
+        
+            .item-detail {
+                .title {
+                    line-height: 50rpx;
+                }
+                .price {
+                    line-height: 50rpx;
+                }
+                .num {
+                    line-height: 50rpx;
+                }
+            }
+        }
+    }
+    .bottom {
+        width: 100vw;
+        height: 100rpx;
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .totalPrice {
+            padding: 10rpx;
+            color: var(--themeColor);
+        }
+        .toPay {
+            width: 200rpx;
+            height: 100rpx;
+            font-size: 30rpx;
+            text-align: center;
+            line-height: 100rpx;
+            background-color: var(--themeColor);
+            color: white;
+        }
+    }
+}

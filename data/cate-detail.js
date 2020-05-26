@@ -33,6 +33,93 @@ const cateDetail = [
         "id": "lihuaguo",
         "thumb": "/image/c2.png",
         "name": "梨花带雨 3个"
+      },{
+        "id":"lihuaguo",
+        "thumb": "/image/c2.png",
+        "name": "梨花带雨 3个"
+      },
+      {
+        "id": "hongzao",
+        "thumb": "/image/c3.png",
+        "name": "红枣 500g"
+      },
+      {
+        "id": "qiyiguo",
+        "thumb": "/image/c4.png",
+        "name": "奇异果 2个"
+      },
+      {
+        "id": "qiyiguo",
+        "thumb": "/image/c4.png",
+        "name": "奇异果 2个"
+      },
+      {
+        "id": "hongzao",
+        "thumb": "/image/c3.png",
+        "name": "红枣 500g"
+      },
+      {
+        "id": "lihuaguo",
+        "thumb": "/image/c2.png",
+        "name": "梨花带雨 3个"
+      },{
+        "id":"lihuaguo",
+        "thumb": "/image/c2.png",
+        "name": "梨花带雨 3个"
+      },
+      {
+        "id": "hongzao",
+        "thumb": "/image/c3.png",
+        "name": "红枣 500g"
+      },
+      {
+        "id": "qiyiguo",
+        "thumb": "/image/c4.png",
+        "name": "奇异果 2个"
+      },
+      {
+        "id": "qiyiguo",
+        "thumb": "/image/c4.png",
+        "name": "奇异果 2个"
+      },
+      {
+        "id": "hongzao",
+        "thumb": "/image/c3.png",
+        "name": "红枣 500g"
+      },
+      {
+        "id": "lihuaguo",
+        "thumb": "/image/c2.png",
+        "name": "梨花带雨 3个"
+      },{
+        "id":"lihuaguo",
+        "thumb": "/image/c2.png",
+        "name": "梨花带雨 3个"
+      },
+      {
+        "id": "hongzao",
+        "thumb": "/image/c3.png",
+        "name": "红枣 500g"
+      },
+      {
+        "id": "qiyiguo",
+        "thumb": "/image/c4.png",
+        "name": "奇异果 2个"
+      },
+      {
+        "id": "qiyiguo",
+        "thumb": "/image/c4.png",
+        "name": "奇异果 2个"
+      },
+      {
+        "id": "hongzao",
+        "thumb": "/image/c3.png",
+        "name": "红枣 500g"
+      },
+      {
+        "id": "lihuaguo",
+        "thumb": "/image/c2.png",
+        "name": "梨花带雨 3个"
       }
     ]
   },

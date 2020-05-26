@@ -10,10 +10,19 @@
 		"preloadBackgroundData": false,
 		"minified": true,
 		"newFeature": true,
-		"autoAudits": false,
 		"coverView": true,
+		"autoAudits": false,
 		"showShadowRootInWxmlPanel": true,
-		"scopeDataCheck": false
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"enhance": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.11.1",
@@ -54,6 +63,20 @@
 					"name": "主题",
 					"pathName": "pages/theme/theme",
 					"query": "id=guowei",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "pages/goods/goods",
+					"pathName": "pages/goods/goods",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "user",
+					"pathName": "pages/user/user",
+					"query": "",
 					"scene": null
 				}
 			]

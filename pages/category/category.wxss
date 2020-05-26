@@ -1,0 +1,65 @@
+.snackShop-category {
+  display: flex;
+}
+.snackShop-category .left {
+  width: 20%;
+  background-color: #fff;
+  height: 100vh;
+  border-right: 1px solid gray;
+}
+.snackShop-category .left .active {
+  border-left: 4px solid var(--themeColor);
+  color: var(--themeColor);
+}
+.snackShop-category .left .catagorylist {
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+.snackShop-category .right {
+  width: 80%;
+  height: 100vh;
+}
+.snackShop-category .right .headerImg {
+  width: 100%;
+}
+.snackShop-category .right .title {
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: var(--themeColor);
+  position: relative;
+}
+.snackShop-category .right .title::before {
+  content: ' ';
+  position: absolute;
+  width: 100rpx;
+  height: 5rpx;
+  top: 40rpx;
+  left: 135rpx;
+  background-color: var(--themeColor);
+}
+.snackShop-category .right .title::after {
+  content: ' ';
+  position: absolute;
+  width: 100rpx;
+  height: 5rpx;
+  top: 40rpx;
+  right: 135rpx;
+  background-color: var(--themeColor);
+}
+.snackShop-category .right .list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.snackShop-category .right .list .item {
+  width: 33.333%;
+  padding: 20rpx;
+}
+.snackShop-category .right .list .item .item-img {
+  padding: 30rpx;
+}
+.snackShop-category .right .list .item .item-name {
+  text-align: center;
+  font-size: 28rpx;
+}

@@ -1,2 +1,71 @@
-<!--pages/user/user.wxml-->
-<text>pages/user/user.wxml</text>
+<view class="snackShop-user">
+  <!-- 用户登陆开始 -->
+    <view class="login">
+      <!-- 如果有用户信息,渲染下面的内容 -->
+      <view wx:if="{{userMessage.nickName}}" class="userMessage">
+        <view class="left">
+          <!-- 用户头像 -->
+          <view class="userImg"><image src="{{userMessage.avatarUrl}}" mode="widthFix"></image></view>
+          <!-- 用户昵称 -->
+          <view class="nickName">{{userMessage.nickName}}</view>
+        </view>
+        <view class="right">
+          <view class="guanyu">关于我们</view>
+        </view>
+      </view>
+    <!-- 否则渲染下面的内容 -->
+      <view wx:else>
+        <button type="default" open-type="getUserInfo" bindgetuserinfo="getUserInfo">点击登录</button>
+      </view>
+  </view>
+  <!-- 用户登录结束 -->
+  <!-- 地址管理开始 -->
+    <navigator class="toAddress"
+    open-type="navigate"
+    url="/pages/address/address">
+      <view class="addressManager">地址管理</view>
+    </navigator>
+  <!-- 地址管理结束 -->
+  <!-- 用户地址信息列表 -->
+  <!-- 如果存在用户地址信息,则显示 -->
+  <block wx:if="{{address.userName}}">
+    <!-- 用户名字 -->
+    <view class="address-userName">{{address.userName}}</view>
+    <!-- 用户电话 -->
+    <view class="address-telNumber">{{address.telNumber}}</view>
+    <!-- 用户详细地址以及邮编 -->
+    <view class="address-detail">{{address.provinceName + address.cityName + address.countyName + address.detailInfo}},邮编:{{address.nationalCode}}</view>
+  </block>
+  <!-- 我的订单开始 -->
+  <view class="myOrder">
+    <view class="order-title">我的订单</view>
+    <!-- 当购物车数组长度不为0的时候,则表明存在商品,页面渲染下面内容 -->
+    <block wx:if="{{carts.length !== 0}}">
+      <!-- 商品列表开始 -->
+      <view class="cartsList" wx:for="{{carts}}" wx:key="index">
+        <!-- 左边栏开始 -->
+        <view class="left">
+          <image src="{{item.data.imageUrl}}" mode="widthFix"></image>
+        </view>
+        <!-- 左边栏结束 -->
+        <!-- 右边栏开始 -->
+        <view class="right">
+          <!-- 商品名字 -->
+          <view class="goods-title">{{item.data.title}}</view>
+          <!-- 商品单价 -->
+          <view class="goods-price">￥{{item.data.price}}</view>
+          <!-- 商品数量 -->
+          <view class="goods-num">×{{item.num}}</view>
+        </view>
+        <!-- 右边栏结束 -->
+      </view>
+      <!-- 商品列表结束 -->
+    </block>
+    <view class="order-id">订单编号：A41843</view>
+    <view class="order-pay">
+      <view class="price">实付：￥{{totalPrice}}元</view>
+      <view class="pay" bindtap="pay">付款</view>
+    </view>
+  </view>
+  <!-- 我的订单结束 -->
+</view>

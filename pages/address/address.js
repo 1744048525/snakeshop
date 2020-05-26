@@ -1,4 +1,5 @@
-// pages/classify/classify.js
+// pages/address/address.js
+import { asyncChooseAddress } from "../../asyncUtil/asyncUtil.js"
 Page({
 
   /**
@@ -25,8 +26,14 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-
+  onShow: async function () {
+    // 在页面显示的时候获取到用户的地址信息
+    let res = await asyncChooseAddress();
+    // console.log(res);
+    //将获取到的地址存储到本地存储中
+    wx.setStorageSync('address', res);
+    //返回上一页
+    wx.navigateBack();
   },
 
   /**

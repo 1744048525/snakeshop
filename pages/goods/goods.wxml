@@ -1,2 +1,67 @@
-<!--pages/goods/goods.wxml-->
-<text>pages/goods/goods.wxml</text>
+<view class="snackShop-goods">
+  <!-- 顶部购物车开始 -->
+  <!-- switchTab可以跳转到tarbar页面 -->
+    <navigator
+      url="/pages/shopcar/shopcar"
+      open-type="switchTab"
+     class="shopCarIcon">
+      <!-- 购物车图片开始 -->
+      <view class="icon">
+        <image src="../../image/cart.png" mode="widthFix"></image>
+      </view>
+      <!-- 购物车图片结束 -->
+      <!-- 商品数量图标开始 -->
+        <view class="shopNum {{num === 0?'hide':''}}">{{num}}</view>
+      <!-- 商品数量图标结束 -->
+    </navigator>
+  <!-- 顶部购物车结束 -->
+  <!-- 商品详情开始 -->
+  <view class="detail">
+    <!-- 商品图片开始 -->
+    <view class="goodsImage">
+      <image src="{{details_data.imageUrl}}" mode="widthFix"></image>
+    </view>
+    <!-- 商品图片结束 -->
+    <!-- 产品功能区开始 -->
+    <view class="function">
+      <!-- 产品数量 -->
+      <view class="goodsnum">数量  {{details_data.count*numToCart}}{{details_data.unit}}</view>
+      <!-- 加号 -->
+      <view class="add" bindtap="addNum">+</view>
+      <view class="addCartText">加入购物车</view>
+      <view class="fun-icon" bindtap="addProductToCart" data-id="{{details_data.id}}">
+        <image src="/image/cart-o.png" mode="widthFix"></image>
+      </view>
+    </view>
+    <!-- 产品功能区结束 -->
+    <!-- 有无货 -->
+      <view class="stock">{{details_data.stock}}</view>
+      <!-- 商品名称 -->
+      <view class="title">{{details_data.title}}</view>
+      <!-- 商品价格 -->
+      <view class="price">￥ {{details_data.price}}</view>
+  </view>
+  <!-- 商品详情结束 -->
+  <!-- 产品详细内容开始 -->
+    <view class="content">
+      <!-- 上方选项栏开始 -->
+      <!-- 为导航栏绑定点击事件 -->
+      <!-- 通过在当前页面的.js文件中设置一个被选中的属性,在.wxss中设置一个被点击后的样式,再在类名中通过三目运算符的方式判断对应的标签是否等于数据中当前被选中的标签,如果是的话,则追加这个被选中的类名,否则添加一个空字符串 -->
+      <!-- 通过点击事件并且传值的方式让我们知道我们当前点击的是哪一个选项,然后我们将data中被选中的tap数据进行重新赋值 -->
+      <!-- catchtap能够阻止事件往上冒泡 -->
+        <view class="top" catchtap="handleTopTabchange">
+          <view bindtap="handleTabchange" data-tap="detail" class="top-detail {{activeTap == 'detail'?'active':''}}">商品详情</view>
+          <view bindtap="handleTabchange" data-tap="parameter" class="top-parameter {{activeTap == 'parameter'?'active':''}}">产品参数</view>
+          <view bindtap="handleTabchange" data-tap="service" class="top-service {{activeTap == 'service'?'active':''}}">售后保障</view>
+        </view>
+      <!-- 上方选项栏结束 -->
+        <view class="bottom">
+          <block class="item" wx:if="{{activeTap == 'detail'}}">{{details_data.detail}}</block>
+          <block class="item" wx:if="{{activeTap == 'parameter'}}">{{details_data.parameter}}</block>
+          <block class="item" wx:if="{{activeTap == 'service'}}">{{details_data.service}}</block>
+        </view>
+      <!-- 下方详情栏开始 -->
+      <!-- 下方详情栏结束 -->
+    </view>
+  <!-- 产品详细内容结束 -->
+</view>

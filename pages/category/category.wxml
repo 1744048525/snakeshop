@@ -1,0 +1,52 @@
+<view class="snackShop-category">
+  <!-- 左边导航栏开始 -->
+    <view class="left">
+      <!-- 分类列表开始 -->
+      <!-- 由于点击相应的选项需要改变其样式,所以我们需要实现设置一个被点击的css样式,通过追加类名的方式改变其样式,因此我们需要进行判断何时添加类名,
+      首先我们得从外部请求到当前分类页面分类列表的数据，然后将其存储到当前页面.js文件的data对象中,然后通过循环data中请求到的数据来渲染列表项。之后我们可以得知每一项即item下的cate属性就是我们想要渲染出来的文字。接下来,我们还要给每一个item绑定点击事件,同时为点击事件传入一个参数(bindtap="tapCatagoryList" data-cate="{{item}}"),传入的参数即是我们当前点击的item属性,之后我们在.js文件中就可以声明这个点击事件的函数,同时可以在函数中获取到我们传入的参数,之后我们可以将获取到的参数设置到data中,然后在标签中的class属性中判断当前标签的item.cate值是否等于被点击标签的item.cate值(selectcate.cate属性的值),如果为true,则返回"active",否则返回一个空字符串。*此处注意返回值必须是字符串类型,否则系统会认为你返回的是一个变量-->
+      <view class="catagorylist {{item.cate == selectcate.cate?'active':''}}" bindtap="tapCatagoryList" data-cate="{{item}}" wx:for="{{cate_detail}}" wx:key="index">{{item.cate}}</view>
+      <!-- 分类列表结束 -->
+    </view>
+  <!-- 左边导航栏结束 -->
+  <!-- 右边内容区域开始 -->
+    <scroll-view scroll-y="{{true}}" class="right">
+      <!-- 顶部图片开始 -->
+        <navigator
+          url="../theme/theme?id=guowei"
+          open-type="navigate"
+         class="headerImg">
+          <image src="{{selectcate.banner}}" mode="widthFix"></image>
+        </navigator>
+      <!-- 顶部图片结束 -->
+      <!-- 分类商品列表开始 -->
+        <!-- 商品列表标题开始 -->
+          <view class="title">
+            {{selectcate.cate}}
+          </view>
+        <!-- 商品列表标题结束 -->
+        <!-- 商品列表详情开始 -->
+        <view
+         class="list">
+         <!-- 由于点击每一项商品都要跳转到商品详情也面,所以这里要使用navigator标签 -->
+         <!-- 为了让商品详情页面能够辨别传入的是哪一个商品,这里就需要在url上将商品的id传过去然后商品详情页再根据传过去的商品id进行相应的页面渲染 -->
+          <navigator
+            url="../goods/goods?id={{item.id}}"
+            open-type="navigate"
+           class="item" wx:for="{{selectcate.detail}}" wx:key="index">
+            <!-- 商品图片开始 -->
+            <view class="item-img">
+              <image src="{{item.thumb}}" mode="widthFix"></image>
+            </view>
+            <!-- 商品图片结束 -->
+            <!-- 商品名称开始 -->
+            <view class="item-name">
+              {{item.name}}
+            </view>
+            <!-- 商品名称结束 -->
+          </navigator>
+        </view>
+        <!-- 商品列表详情结束 -->
+      <!-- 分类商品列表结束 -->
+    </scroll-view>
+  <!-- 右边内容区域结束 -->
+</view>
